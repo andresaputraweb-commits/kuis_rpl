@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Hasil Kuis — Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 DATA HASIL KUIS SISWA</h1>
+            <p>Jurusan Rekayasa Perangkat Lunak</p>
+        </header>
+
+        <div class="nav-links">
+            <a href="index.html" class="btn btn-primary btn-small">🏠 Kembali ke Kuis</a>
+        </div>
+
+        <div class="card">
+            <h2>📋 Daftar Hasil Kuis</h2>
+            <p style="margin-bottom:15px;">Berikut adalah semua hasil kuis yang telah disimpan:</p>
+            
+            <div class="table-wrapper">
+                <table id="tabelHasil">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Siswa</th>
+                            <th>Kelas</th>
+                            <th>Hari/Tanggal</th>
+                            <th>Tahun</th>
+                            <th>Nilai</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="isiTabel"></tbody>
+                </table>
+            </div>
+
+            <br>
+            <button class="btn btn-danger btn-small" onclick="hapusSemuaData()">🗑️ Hapus Semua Data</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Online SMK RPL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏫 KUIS ONLINE SMK RPL</h1>
+            <p>Tes Pengetahuan Jurusan Rekayasa Perangkat Lunak</p>
+        </header>
+
+        <!-- Navigasi -->
+        <div class="nav-links">
+            <a href="index.html" class="btn btn-primary btn-small">🏠 Beranda</a>
+            <a href="Form.html" class="btn btn-secondary btn-small">📊 Hasil / Admin</a>
+        </div>
+
+        <!-- Langkah 1: Identitas & Pilih Kelas -->
+        <div class="card" id="section-pilih">
+            <h2>📝 Silakan Isi Data Diri</h2>
+            
+            <div class="form-group">
+                <label for="nama">Nama Lengkap Siswa:</label>
+                <input type="text" id="nama" placeholder="Masukkan nama kamu..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="kelas">Pilih Kelas & Tingkatan:</label>
+                <select id="kelas">
+                    <option value="">-- Pilih Kelas --</option>
+                    <optgroup label="Kelas 10">
+                        <option value="RPL 1">Kelas 10 — RPL 1</option>
+                        <option value="RPL 2">Kelas 10 — RPL 2</option>
+                        <option value="RPL 3">Kelas 10 — RPL 3</option>
+                    </optgroup>
+                    <optgroup label="Kelas 11">
+                        <option value="RPL 1">Kelas 11 — RPL 1</option>
+                        <option value="RPL 2">Kelas 11 — RPL 2</option>
+                        <option value="RPL 3">Kelas 11 — RPL 3</option>
+                    </optgroup>
+                    <optgroup label="Kelas 12">
+                        <option value="RPL 1">Kelas 12 — RPL 1</option>
+                        <option value="RPL 2">Kelas 12 — RPL 2</option>
+                        <option value="RPL 3">Kelas 12 — RPL 3</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <button class="btn btn-primary" onclick="mulaiKuis()">🚀 Mulai Kuis</button>
+        </div>
+
+        <!-- Langkah 2: Kuis -->
+        <div class="card hidden" id="section-kuis">
+            <h2>📋 Kuis — <span id="info-kelas"></span></h2>
+            <p id="info-waktu" style="color:#666; margin-bottom:20px;"></p>
+            <form id="formKuis"></form>
+            <button class="btn btn-primary" onclick="kirimKuis()">✅ Kirim Jawaban</button>
+        </div>
+
+        <!-- Langkah 3: Hasil -->
+        <div class="card hidden" id="section-hasil">
+            <h2>🎉 Hasil Kuis</h2>
+            <div class="result-box">
+                <p class="score-info">Nama: <strong id="hasil-nama"></strong></p>
+                <p class="score-info">Kelas: <strong id="hasil-kelas"></strong></p>
+                <p class="score-info">Hari/Tanggal: <strong id="hasil-tanggal"></strong></p>
+                <div class="score-display" id="hasil-nilai"></div>
+                <p id="hasil-keterangan"></p>
+                <br>
+                <button class="btn btn-primary" onclick="ulangiKuis()">🔄 Kerjakan Lagi</button>
+                <a href="Form.html" class="btn btn-secondary">📊 Lihat Semua Hasil</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
